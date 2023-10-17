@@ -7,6 +7,8 @@
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
+
+
 <header></header>
 <div class="example-wrapper">
 
@@ -18,23 +20,20 @@
         <li>Your template at <code><a href="{{ 'C:/Users/FanTasy CriT/bookstore/templates/book/index.html.twig'|file_link(0) }}">templates/book/index.html.twig</a></code></li>
     </ul>
 </div>
-<form style="position: absolute; top: 30%; left:50%; transform: translate(-50%, -50%); background-color: white; padding: 10px; border: 1px solid #ccc; border-radius: 5px; z-index: 1;">
-  <!-- Email input -->
-  <div class="form-outline mb-4">
-  <label class="form-label" for="form2Example1"> Name</label>
-    <input type="text" id="form2Example1" class="form-control" />
-  </div>
-  
-
-  <!-- Password input -->
-  <div class="form-outline mb-4">
-  <label class="form-label" for="form2Example2">Age</label>
-    <input type="text" id="form2Example2" class="form-control" />
-  </div>
-
-  <!-- Submit button -->
-  <button type="button" style="position: absolute;top: 162px;left: 151px;" class="btn btn-primary btn-block mb-4">Add</button>
-</form>
+<div style="display:none" class="container">
+        <h1>Sample Floating Form</h1>
+        <form style="visibility:;position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc; border-radius: 5px; z-index: 1;">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input style="margin-top:10px" type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label style="margin-top:10px" for="age">Age:</label>
+                <input style="margin-top:10px" type="number" class="form-control" id="age" placeholder="Enter your age">
+            </div>
+            <a class data-author-name="{{ author.name }}" data-author-age="{{ author.age }}"href="/update/1" style="margin-top:20px;margin-left:60px" class="btn btn-primary">update</a>
+        </form>
+    </div>
 <div class="container-xl">
     <div class="table-responsive">
         <div class="table-wrapper">
